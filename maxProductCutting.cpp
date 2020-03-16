@@ -35,7 +35,7 @@ ll maxProductCutting(ll len){
     if(len<=2)return ans=1;
     ll res=-1;
     for(ll i=1;i<=len;i++){
-        res=max(res,i*rodCutting(len-i));
+        res=max(res,i*maxProductCutting(len-i));
     }
     return ans=res;
 }
@@ -47,6 +47,6 @@ int main(){
     while(t--){
         memset(dp,-1,sizeof(dp));
         cin>>n;
-        cout<<rodCutting(n)<<endl;
+        cout<<maxProductCutting(n)<<endl;
     }
 }
