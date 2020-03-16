@@ -29,7 +29,7 @@ ll power(ll x,ll n)
 ll dp[105];
 ll n;
 
-ll rodCutting(ll len){
+ll maxProductCutting(ll len){
     ll &ans=dp[len];
     if(ans!=-1)return ans;
     if(len<=2)return ans=1;
